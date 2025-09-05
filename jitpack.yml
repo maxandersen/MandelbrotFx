@@ -1,0 +1,6 @@
+before_install:
+  - curl https://mise.run | sh
+  - mise use java@25
+
+install:
+  - mise x -- mvn install
