@@ -2,14 +2,13 @@
 before_install:
 # Setup mise environment
   - curl https://mise.run | sh
-  - eval "$(mise activate bash)"
 # the following installs the right tools and creates a mise.toml
 # you can skip these if you commit a mise.toml to the project.
-  - mise use java@25
+  - ~/.local/bin/mise use java@25
 
 
 install:
 # you could technically just run mvn install directly
 # put just showing mise x as an option where you can
 # configure additional jdks.
-  - mise x -- mvn install
+  - ~/.local/bin/mise x -- mvn install
